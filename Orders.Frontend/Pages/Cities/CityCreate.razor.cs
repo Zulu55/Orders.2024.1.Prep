@@ -3,22 +3,22 @@ using Microsoft.AspNetCore.Components;
 using Orders.Frontend.Repositories;
 using Orders.Shared.Entities;
 
-namespace Orders.Frontend.Pages.States
+namespace Orders.Frontend.Pages.Cities
 {
-    public partial class StateCreate
+    public partial class CityCreate
     {
-        private State state = new();
-        private StateForm? stateForm;
+        private City city = new();
+        private CityForm? cityForm;
 
-        [Parameter] public int CountryId { get; set; }
         [Inject] private IRepository Repository { get; set; } = null!;
         [Inject] private NavigationManager NavigationManager { get; set; } = null!;
         [Inject] private SweetAlertService SweetAlertService { get; set; } = null!;
+        [Parameter] public int StateId { get; set; }
 
         private async Task CreateAsync()
         {
-            state.CountryId = CountryId;
-            var responseHttp = await Repository.PostAsync("/api/states", state);
+            city.StateId = StateId;
+            var responseHttp = await Repository.PostAsync("/api/cities", city);
             if (responseHttp.Error)
             {
                 var message = await responseHttp.GetErrorMessageAsync();
@@ -38,8 +38,8 @@ namespace Orders.Frontend.Pages.States
 
         private void Return()
         {
-            stateForm!.FormPostedSuccessfully = true;
-            NavigationManager.NavigateTo($"/countries/details/{CountryId}");
+            cityForm!.FormPostedSuccessfully = true;
+            NavigationManager.NavigateTo($"/states/details/{StateId}");
         }
     }
 }

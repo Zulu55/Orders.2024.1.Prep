@@ -13,7 +13,6 @@ namespace Orders.Frontend.Pages.Countries
         [Inject] private NavigationManager NavigationManager { get; set; } = null!;
         [Inject] private IRepository Repository { get; set; } = null!;
         [Inject] private SweetAlertService SweetAlertService { get; set; } = null!;
-
         [Parameter] public int Id { get; set; }
 
         protected override async Task OnInitializedAsync()

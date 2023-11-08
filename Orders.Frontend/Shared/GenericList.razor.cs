@@ -4,8 +4,6 @@ namespace Orders.Frontend.Shared
 {
     public partial class GenericList<Titem>
     {
-        [EditorRequired]
-        [Parameter]
-        public List<Titem> MyList { get; set; } = null!;
+        [EditorRequired, Parameter] public List<Titem> MyList { get; set; } = null!;
     }
 }

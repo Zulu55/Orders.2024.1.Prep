@@ -8,14 +8,12 @@ namespace Orders.Frontend.Pages.Countries
 {
     public partial class CountryDetails
     {
+        private Country? country;
+
+        [Parameter] public int CountryId { get; set; }
         [Inject] private NavigationManager NavigationManager { get; set; } = null!;
         [Inject] private SweetAlertService SweetAlertService { get; set; } = null!;
         [Inject] private IRepository Repository { get; set; } = null!;
-
-        private Country? country;
-
-        [Parameter]
-        public int CountryId { get; set; }
 
         protected override async Task OnInitializedAsync()
         {

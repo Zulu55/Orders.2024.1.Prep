@@ -4,29 +4,33 @@ using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Routing;
 using Orders.Shared.Entities;
 
-namespace Orders.Frontend.Pages.Categories
+namespace Orders.Frontend.Pages.Cities
 {
-    public partial class CategoryForm
+    public partial class CityForm
     {
         private EditContext editContext = null!;
 
-        [EditorRequired, Parameter] public Category Category { get; set; } = null!;
+        [EditorRequired, Parameter] public City City { get; set; } = null!;
         [EditorRequired, Parameter] public EventCallback OnValidSubmit { get; set; }
         [EditorRequired, Parameter] public EventCallback ReturnAction { get; set; }
         [Inject] private SweetAlertService SweetAlertService { get; set; } = null!;
+        public bool FormPostedSuccessfully { get; set; }
 
         protected override void OnInitialized()
         {
-            editContext = new(Category);
+            editContext = new(City);
         }
 
-        public bool FormPostedSuccessfully { get; set; } = false;
-
-        private async Task OnBeforeInternalNavigation(LocationChangingContext context)
+        private async Task OnBeforeInternalNavigationAsync(LocationChangingContext context)
         {
             var formWasEdited = editContext.IsModified();
 
-            if (!formWasEdited || FormPostedSuccessfully)
+            if (!formWasEdited)
+            {
+                return;
+            }
+
+            if (FormPostedSuccessfully)
             {
                 return;
             }
@@ -35,7 +39,7 @@ namespace Orders.Frontend.Pages.Categories
             {
                 Title = "Confirmación",
                 Text = "¿Deseas abandonar la página y perder los cambios?",
-                Icon = SweetAlertIcon.Warning,
+                Icon = SweetAlertIcon.Question,
                 ShowCancelButton = true
             });
 

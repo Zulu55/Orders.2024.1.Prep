@@ -10,18 +10,9 @@ namespace Orders.Frontend.Pages.Countries
     {
         private EditContext editContext = null!;
 
-        [EditorRequired]
-        [Parameter]
-        public Country Country { get; set; } = null!;
-
-        [EditorRequired]
-        [Parameter]
-        public EventCallback OnValidSubmit { get; set; }
-
-        [EditorRequired]
-        [Parameter]
-        public EventCallback ReturnAction { get; set; }
-
+        [EditorRequired, Parameter] public Country Country { get; set; } = null!;
+        [EditorRequired, Parameter] public EventCallback OnValidSubmit { get; set; }
+        [EditorRequired, Parameter] public EventCallback ReturnAction { get; set; }
         [Inject] private SweetAlertService SweetAlertService { get; set; } = null!;
 
         protected override void OnInitialized()

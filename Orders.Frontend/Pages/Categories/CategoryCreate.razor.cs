@@ -8,12 +8,11 @@ namespace Orders.Frontend.Pages.Categories
     public partial class CategoryCreate
     {
         private CategoryForm? categoryForm;
+        private Category category = new();
 
         [Inject] private IRepository Repository { get; set; } = null!;
         [Inject] private NavigationManager NavigationManager { get; set; } = null!;
         [Inject] private SweetAlertService SweetAlertService { get; set; } = null!;
-
-        private Category category = new();
 
         private async Task CreateAsync()
         {
