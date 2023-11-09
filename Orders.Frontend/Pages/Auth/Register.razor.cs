@@ -15,6 +15,7 @@ namespace Orders.Frontend.Pages.Auth
         private List<State>? states;
         private List<City>? cities;
         private bool loading;
+        private string? imageUrl;
 
         [Inject] private NavigationManager NavigationManager { get; set; } = null!;
         [Inject] private SweetAlertService SweetAlertService { get; set; } = null!;
@@ -24,6 +25,12 @@ namespace Orders.Frontend.Pages.Auth
         protected override async Task OnInitializedAsync()
         {
             await LoadCountriesAsync();
+        }
+
+        private void ImageSelected(string imagenBase64)
+        {
+            userDTO.Photo = imagenBase64;
+            imageUrl = null;
         }
 
         private async Task CountryChangedAsync(ChangeEventArgs e)
