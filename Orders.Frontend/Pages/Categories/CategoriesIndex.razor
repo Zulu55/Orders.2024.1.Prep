@@ -6,13 +6,17 @@
     <a class="btn btn-primary" href="/categories/create">Nueva Categoría</a>
 </div>
 
+<Pagination CurrentPage="currentPage"
+            TotalPages="totalPages"
+            SelectedPage="SelectedPageAsync" />
+
 <GenericList MyList="Categories">
     <Body>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>País</th>
-                    <th></th>
+                    <th>Categoría</th>
+                    <th style="width:140px"></th>
                 </tr>
             </thead>
             <tbody>
@@ -23,8 +27,8 @@
                             @category.Name
                         </td>
                         <td>
-                            <a href="/categories/edit/@category.Id" class="btn btn-warning">Editar</a>
-                            <button class="btn btn-danger" @onclick=@(() => DeleteAsync(category))>Borrar</button>
+                            <a href="/categories/edit/@category.Id" class="btn btn-warning btn-sm">Editar</a>
+                            <button class="btn btn-danger btn-sm" @onclick=@(() => DeleteAsync(category))>Borrar</button>
                         </td>
                     </tr>
                 }
