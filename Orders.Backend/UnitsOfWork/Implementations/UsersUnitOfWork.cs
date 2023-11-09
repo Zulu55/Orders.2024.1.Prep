@@ -1,7 +1,7 @@
-﻿using Orders.Backend.Repositories.Interfaces;
+﻿using Microsoft.AspNetCore.Identity;
+using Orders.Backend.Repositories.Interfaces;
 using Orders.Backend.UnitsOfWork.Interfaces;
 using Orders.Shared.Entities;
-using Orders.Shared.Responses;
 
 namespace Orders.Backend.UnitsOfWork.Implementations
 {
@@ -14,6 +14,14 @@ namespace Orders.Backend.UnitsOfWork.Implementations
             _usersRepository = usersRepository;
         }
 
-        public async Task<ActionResponse<User>> GetAsync(string email) => await _usersRepository.GetAsync(email);
+        public async Task<IdentityResult> AddUserAsync(User user, string password) => await _usersRepository.AddUserAsync(user, password);
+
+        public async Task AddUserToRoleAsync(User user, string roleName) => await _usersRepository.AddUserToRoleAsync(user, roleName);
+
+        public async Task CheckRoleAsync(string roleName) => await _usersRepository.CheckRoleAsync(roleName);
+
+        public async Task<User> GetUserAsync(string email) => await _usersRepository.GetUserAsync(email);
+
+        public async Task<bool> IsUserInRoleAsync(User user, string roleName) => await _usersRepository.IsUserInRoleAsync(user, roleName);
     }
 }
