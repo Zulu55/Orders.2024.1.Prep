@@ -1,12 +1,19 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Orders.Shared.DTOs;
 using Orders.Shared.Entities;
+using Orders.Shared.Responses;
 
 namespace Orders.Backend.Repositories.Interfaces
 {
     public interface IUsersRepository
     {
         Task<User> GetUserAsync(string email);
+
+        Task<User> GetUserAsync(Guid userId);
+
+        Task<IdentityResult> ChangePasswordAsync(User user, string currentPassword, string newPassword);
+
+        Task<IdentityResult> UpdateUserAsync(User user);
 
         Task<IdentityResult> AddUserAsync(User user, string password);
 
