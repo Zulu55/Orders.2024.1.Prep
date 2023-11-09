@@ -6,53 +6,55 @@
 }
 else
 {
-    <h3>@country.Name</h3>
-    <div class="mb-2">
-        <a class="btn btn-primary" href="/states/create/@country.Id">Nuevo Estado/Departamento</a>
-        <a class="btn btn-success" href="/countries">Regresar</a>
+    <div class="card">
+        <div class="card-header">
+            <span>
+                <i class="oi oi-globe"></i> @country.Name
+                <a class="btn btn-sm btn-primary float-end mx-1" href="/states/create/@country.Id"><i class="oi oi-plus"></i> Adicionar Estado/Departamento</a>
+                <a class="btn btn-sm btn-success float-end" href="/countries"><i class="oi oi-arrow-thick-left" /> Regresar</a>
+            </span>
+        </div>
+        <div class="card-body">
+            <div class="mb-2" style="display: flex; flex-wrap:wrap; align-items: center;">
+                <div>
+                    <input style="width: 400px;" type="text" class="form-control" id="titulo" placeholder="Buscar estado/departamento..." @bind-value="Filter" />
+                </div>
+                <div class="mx-1">
+                    <button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync"><i class="oi oi-layers" /> Filtrar</button>
+                    <button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync"><i class="oi oi-ban" /> Limpiar</button>
+                </div>
+            </div>
+
+            <Pagination CurrentPage="currentPage"
+                    TotalPages="totalPages"
+                    SelectedPage="SelectedPageAsync" />
+
+            <GenericList MyList="states!">
+                <Body>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Estado / Departamento</th>
+                                <th style="width:90px">Ciudades</th>
+                                <th style="width:168px"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var state in states!)
+                            {
+                                <tr>
+                                    <td><a href="/states/details/@state.Id">@state.Name</a></td>
+                                    <td>@state.CitiesNumber</td>
+                                    <td>
+                                        <a class="btn btn-warning btn-sm" href="/states/edit/@state.Id"><i class="oi oi-pencil" /> Editar</a>
+                                        <button class="btn btn-danger btn-sm" @onclick=@(() => DeleteAsync(state))><i class="oi oi-trash" /> Borrar</button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </Body>
+            </GenericList>
+        </div>
     </div>
-
-    <h4>Estados/Departamentos</h4>
-
-    <div class="mb-2" style="display: flex; flex-wrap:wrap; align-items: center;">
-        <input style="width: 400px;" type="text" class="form-control" id="titulo" placeholder="Buscar estado/departamento..." @bind-value="Filter" />
-        <button type="button" class="btn btn-outline-primary mx-1" @onclick="ApplyFilterAsync">Filtrar</button>
-        <button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync">Limpiar</button>
-    </div>
-
-    <Pagination CurrentPage="currentPage"
-            TotalPages="totalPages"
-            SelectedPage="SelectedPageAsync" />
-
-    <GenericList MyList="states!">
-        <Body>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Estado / Departamento</th>
-                        <th style="width:90px">Ciudades</th>
-                        <th style="width:210px"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var state in states!)
-                    {
-                        <tr>
-                            <td>
-                                @state.Name
-                            </td>
-                            <td>
-                                @state.CitiesNumber
-                            </td>
-                            <td>
-                                <a class="btn btn-warning btn-sm" href="/states/edit/@state.Id">Editar</a>
-                                <a class="btn btn-info btn-sm" href="/states/details/@state.Id">Detalles</a>
-                                <button class="btn btn-danger btn-sm" @onclick=@(() => DeleteAsync(state))>Borrar</button>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </Body>
-    </GenericList>
 }
