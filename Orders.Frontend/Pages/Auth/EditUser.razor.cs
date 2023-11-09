@@ -3,6 +3,7 @@ using CurrieTechnologies.Razor.SweetAlert2;
 using Microsoft.AspNetCore.Components;
 using Orders.Frontend.Repositories;
 using Orders.Frontend.Services;
+using Orders.Shared.DTOs;
 using Orders.Shared.Entities;
 
 namespace Orders.Frontend.Pages.Auth
@@ -113,7 +114,7 @@ namespace Orders.Frontend.Pages.Auth
 
         private async Task SaveUserAsync()
         {
-            var responseHttp = await Repository.PutAsync<User>("/api/accounts", user!);
+            var responseHttp = await Repository.PutAsync<User, TokenDTO>("/api/accounts", user!);
             if (responseHttp.Error)
             {
                 var message = await responseHttp.GetErrorMessageAsync();
@@ -121,6 +122,7 @@ namespace Orders.Frontend.Pages.Auth
                 return;
             }
 
+            await LoginService.LoginAsync(responseHttp.Response!.Token);
             NavigationManager.NavigateTo("/");
         }
     }
