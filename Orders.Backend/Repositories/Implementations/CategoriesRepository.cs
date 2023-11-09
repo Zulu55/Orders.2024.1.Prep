@@ -8,30 +8,29 @@ using Orders.Shared.Responses;
 
 namespace Orders.Backend.Repositories.Implementations
 {
-    public class CountriesRepository : GenericRepository<Country>, ICountriesRepository
+    public class CategoriesRepository : GenericRepository<Category>, ICategoriesRepository
     {
         private readonly DataContext _context;
 
-        public CountriesRepository(DataContext context) : base(context)
+        public CategoriesRepository(DataContext context) : base(context)
         {
             _context = context;
         }
 
-        public override async Task<ActionResponse<IEnumerable<Country>>> GetAsync(PaginationDTO pagination)
+        public override async Task<ActionResponse<IEnumerable<Category>>> GetAsync(PaginationDTO pagination)
         {
-            var queryable = _context.Countries
-                .Include(c => c.States)
-                .AsQueryable();
+            var queryable = _context.Categories.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(pagination.Filter))
             {
                 queryable = queryable.Where(x => x.Name.ToLower().Contains(pagination.Filter.ToLower()));
             }
 
-            return new ActionResponse<IEnumerable<Country>>
+            return new ActionResponse<IEnumerable<Category>>
             {
                 WasSuccess = true,
                 Result = await queryable
+                    .OrderBy(x => x.Name)
                     .Paginate(pagination)
                     .ToListAsync()
             };
@@ -39,7 +38,7 @@ namespace Orders.Backend.Repositories.Implementations
 
         public override async Task<ActionResponse<int>> GetTotalPagesAsync(PaginationDTO pagination)
         {
-            var queryable = _context.Countries.AsQueryable();
+            var queryable = _context.Categories.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(pagination.Filter))
             {
@@ -52,29 +51,6 @@ namespace Orders.Backend.Repositories.Implementations
             {
                 WasSuccess = true,
                 Result = totalPages
-            };
-        }
-
-        public override async Task<ActionResponse<Country>> GetAsync(int id)
-        {
-            var country = await _context.Countries
-                 .Include(c => c.States!)
-                 .ThenInclude(s => s.Cities)
-                 .FirstOrDefaultAsync(c => c.Id == id);
-
-            if (country == null)
-            {
-                return new ActionResponse<Country>
-                {
-                    WasSuccess = false,
-                    Message = "País no existe"
-                };
-            }
-
-            return new ActionResponse<Country>
-            {
-                WasSuccess = true,
-                Result = country
             };
         }
     }

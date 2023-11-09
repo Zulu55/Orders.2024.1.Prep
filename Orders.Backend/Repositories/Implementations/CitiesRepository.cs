@@ -23,6 +23,11 @@ namespace Orders.Backend.Repositories.Implementations
                 .Where(x => x.State!.Id == pagination.Id)
                 .AsQueryable();
 
+            if (!string.IsNullOrWhiteSpace(pagination.Filter))
+            {
+                queryable = queryable.Where(x => x.Name.ToLower().Contains(pagination.Filter.ToLower()));
+            }
+
             return new ActionResponse<IEnumerable<City>>
             {
                 WasSuccess = true,
@@ -38,6 +43,11 @@ namespace Orders.Backend.Repositories.Implementations
             var queryable = _context.Cities
                 .Where(x => x.State!.Id == pagination.Id)
                 .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(pagination.Filter))
+            {
+                queryable = queryable.Where(x => x.Name.ToLower().Contains(pagination.Filter.ToLower()));
+            }
 
             double count = await queryable.CountAsync();
             int totalPages = (int)Math.Ceiling(count / pagination.RecordsNumber);
