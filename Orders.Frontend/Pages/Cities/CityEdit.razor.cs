@@ -1,11 +1,13 @@
-﻿using CurrieTechnologies.Razor.SweetAlert2;
+﻿using System.Net;
+using CurrieTechnologies.Razor.SweetAlert2;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Orders.Frontend.Repositories;
 using Orders.Shared.Entities;
-using System.Net;
 
 namespace Orders.Frontend.Pages.Cities
 {
+    [Authorize(Roles = "Admin")]
     public partial class CityEdit
     {
         private City? city;
