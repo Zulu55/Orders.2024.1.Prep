@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Orders.Shared.DTOs;
 using Orders.Shared.Entities;
-using Orders.Shared.Responses;
 
 namespace Orders.Backend.Repositories.Interfaces
 {
@@ -26,5 +25,9 @@ namespace Orders.Backend.Repositories.Interfaces
         Task<SignInResult> LoginAsync(LoginDTO model);
 
         Task LogoutAsync();
+
+        Task<string> GenerateEmailConfirmationTokenAsync(User user);
+
+        Task<IdentityResult> ConfirmEmailAsync(User user, string token);
     }
 }
