@@ -252,9 +252,6 @@ namespace Orders.Backend.Repositories.Implementations
                     }
                 }
 
-                //TODO: Pending to solve problem to update categories
-                //product.ProductCategories = productDTO.ProductCategoryIds!.Select(x => new ProductCategory { CategoryId = x }).ToList();
-
                 _context.Update(product);
                 await _context.SaveChangesAsync();
                 return new ActionResponse<Product>
