@@ -1,4 +1,6 @@
-﻿using CurrieTechnologies.Razor.SweetAlert2;
+﻿using Blazored.Modal;
+using Blazored.Modal.Services;
+using CurrieTechnologies.Razor.SweetAlert2;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Orders.Frontend.Repositories;
@@ -18,6 +20,7 @@ namespace Orders.Frontend.Pages.States
         [Inject] private IRepository Repository { get; set; } = null!;
         [Inject] private NavigationManager NavigationManager { get; set; } = null!;
         [Inject] private SweetAlertService SweetAlertService { get; set; } = null!;
+        [CascadingParameter] private BlazoredModalInstance BlazoredModal { get; set; } = default!;
 
         protected override async Task OnParametersSetAsync()
         {
@@ -44,7 +47,10 @@ namespace Orders.Frontend.Pages.States
                 await SweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
                 return;
             }
+
+            await BlazoredModal.CloseAsync(ModalResult.Ok());
             Return();
+
             var toast = SweetAlertService.Mixin(new SweetAlertOptions
             {
                 Toast = true,

@@ -10,7 +10,7 @@ else
         <div class="card-header">
             <span>
                 <i class="oi oi-globe"></i> @country.Name
-                <a class="btn btn-sm btn-primary float-end mx-1" href="/states/create/@country.Id"><i class="oi oi-plus"></i> Adicionar Estado/Departamento</a>
+                <a class="btn btn-sm btn-primary float-end mx-1" @onclick=@(() => ShowModalAsync())><i class="oi oi-plus"></i> Adicionar Estado/Departamento</a>
                 <a class="btn btn-sm btn-success float-end" href="/countries"><i class="oi oi-arrow-thick-left" /> Regresar</a>
             </span>
         </div>
@@ -46,7 +46,7 @@ else
                                     <td><a href="/states/details/@state.Id">@state.Name</a></td>
                                     <td>@state.CitiesNumber</td>
                                     <td>
-                                        <a class="btn btn-warning btn-sm" href="/states/edit/@state.Id"><i class="oi oi-pencil" /> Editar</a>
+                                        <a class="btn btn-warning btn-sm" @onclick=@(() => ShowModalAsync(state.Id, true))><i class="oi oi-pencil" /> Editar</a>
                                         <button class="btn btn-danger btn-sm" @onclick=@(() => DeleteAsync(state))><i class="oi oi-trash" /> Borrar</button>
                                     </td>
                                 </tr>

@@ -1,4 +1,6 @@
 ﻿using System.Net;
+using Blazored.Modal;
+using Blazored.Modal.Services;
 using CurrieTechnologies.Razor.SweetAlert2;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
@@ -17,6 +19,7 @@ namespace Orders.Frontend.Pages.Cities
         [Inject] private IRepository Repository { get; set; } = null!;
         [Inject] private SweetAlertService SweetAlertService { get; set; } = null!;
         [Parameter] public int CityId { get; set; }
+        [CascadingParameter] private BlazoredModalInstance BlazoredModal { get; set; } = default!;
 
         protected override async Task OnParametersSetAsync()
         {
@@ -43,7 +46,10 @@ namespace Orders.Frontend.Pages.Cities
                 await SweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
                 return;
             }
+
+            await BlazoredModal.CloseAsync(ModalResult.Ok());
             Return();
+
             var toast = SweetAlertService.Mixin(new SweetAlertOptions
             {
                 Toast = true,

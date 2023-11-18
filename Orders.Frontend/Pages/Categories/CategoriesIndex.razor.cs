@@ -42,8 +42,11 @@ namespace Orders.Frontend.Pages.Categories
                 modalReference = Modal.Show<CategoryCreate>();
             }
 
-            await modalReference.Result;
-            await LoadAsync();
+            var result = await modalReference.Result;
+            if (result.Confirmed)
+            {
+                await LoadAsync();
+            }
         }
 
         private async Task SelectedPageAsync(int page)
