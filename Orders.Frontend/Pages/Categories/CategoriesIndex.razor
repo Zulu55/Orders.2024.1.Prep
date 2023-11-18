@@ -4,7 +4,7 @@
     <div class="card-header">
         <span>
             <i class="oi oi-list"></i> Categorias
-            <a class="btn btn-sm btn-primary float-end" href="/categories/create"><i class="oi oi-plus"></i> Adicionar Categoría</a>
+            <a class="btn btn-sm btn-primary float-end" @onclick=@(() => ShowModalAsync())><i class="oi oi-plus"></i> Adicionar Categoría</a>
         </span>
     </div>
     <div class="card-body">
@@ -37,7 +37,7 @@
                             <tr>
                                 <td>@category.Name</td>
                                 <td>
-                                    <a href="/categories/edit/@category.Id" class="btn btn-warning btn-sm"><i class="oi oi-pencil" /> Editar</a>
+                                    <a @onclick=@(() => ShowModalAsync(category.Id, true)) class="btn btn-warning btn-sm"><i class="oi oi-pencil" /> Editar</a>
                                     <button class="btn btn-danger btn-sm" @onclick=@(() => DeleteAsync(category))><i class="oi oi-trash" /> Borrar</button>
                                 </td>
                             </tr>

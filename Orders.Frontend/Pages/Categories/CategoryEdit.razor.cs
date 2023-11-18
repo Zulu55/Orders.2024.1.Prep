@@ -65,7 +65,7 @@ namespace Orders.Frontend.Pages.Categories
         private void Return()
         {
             categoryForm!.FormPostedSuccessfully = true;
-            NavigationManager.NavigateTo("categories");
+            NavigationManager.NavigateTo("/categories");
         }
     }
 }
