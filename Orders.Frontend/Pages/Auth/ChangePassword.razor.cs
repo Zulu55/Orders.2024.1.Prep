@@ -1,4 +1,6 @@
-﻿using CurrieTechnologies.Razor.SweetAlert2;
+﻿using Blazored.Modal;
+using Blazored.Modal.Services;
+using CurrieTechnologies.Razor.SweetAlert2;
 using Microsoft.AspNetCore.Components;
 using Orders.Frontend.Repositories;
 using Orders.Shared.DTOs;
@@ -13,6 +15,7 @@ namespace Orders.Frontend.Pages.Auth
         [Inject] private NavigationManager NavigationManager { get; set; } = null!;
         [Inject] private SweetAlertService SweetAlertService { get; set; } = null!;
         [Inject] private IRepository Repository { get; set; } = null!;
+        [CascadingParameter] private BlazoredModalInstance BlazoredModal { get; set; } = default!;
 
         private async Task ChangePasswordAsync()
         {
@@ -27,6 +30,7 @@ namespace Orders.Frontend.Pages.Auth
             }
 
             loading = false;
+            await BlazoredModal.CloseAsync(ModalResult.Ok());
             NavigationManager.NavigateTo("/editUser");
             var toast = SweetAlertService.Mixin(new SweetAlertOptions
             {
