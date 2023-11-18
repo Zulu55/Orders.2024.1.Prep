@@ -19,6 +19,86 @@ namespace Orders.Backend.Repositories.Implementations
             _fileStorage = fileStorage;
         }
 
+        public async Task<ActionResponse<ImageDTO>> AddImageAsync(ImageDTO imageDTO)
+        {
+            var product = await _context.Products
+                .Include(x => x.ProductImages)
+                .FirstOrDefaultAsync(x => x.Id == imageDTO.ProductId);
+            if (product == null)
+            {
+                return new ActionResponse<ImageDTO>
+                {
+                    WasSuccess = false,
+                    Message = "Producto no existe"
+                };
+            }
+
+            for (int i = 0; i < imageDTO.Images.Count; i++)
+            {
+                if (!imageDTO.Images[i].StartsWith("https://"))
+                {
+                    var photoProduct = Convert.FromBase64String(imageDTO.Images[i]);
+                    imageDTO.Images[i] = await _fileStorage.SaveFileAsync(photoProduct, ".jpg", "products");
+                    product.ProductImages!.Add(new ProductImage { Image = imageDTO.Images[i] });
+                }
+            }
+
+            _context.Update(product);
+            await _context.SaveChangesAsync();
+            return new ActionResponse<ImageDTO>
+            {
+                WasSuccess = true,
+                Result = imageDTO
+            };
+        }
+
+        public async Task<ActionResponse<ImageDTO>> RemoveLastImageAsync(ImageDTO imageDTO)
+        {
+            var product = await _context.Products
+                .Include(x => x.ProductImages)
+                .FirstOrDefaultAsync(x => x.Id == imageDTO.ProductId);
+            if (product == null)
+            {
+                return new ActionResponse<ImageDTO>
+                {
+                    WasSuccess = false,
+                    Message = "Producto no existe"
+                };
+            }
+
+            if (product.ProductImages is null || product.ProductImages.Count == 0)
+            {
+                return new ActionResponse<ImageDTO>
+                {
+                    WasSuccess = true,
+                    Result = imageDTO
+                };
+            }
+
+            var lastImage = product.ProductImages.LastOrDefault();
+            await _fileStorage.RemoveFileAsync(lastImage!.Image, "products");
+            _context.ProductImages.Remove(lastImage);
+
+            try
+            {
+                await _context.SaveChangesAsync();
+                imageDTO.Images = product.ProductImages.Select(x => x.Image).ToList();
+                return new ActionResponse<ImageDTO>
+                {
+                    WasSuccess = true,
+                    Result = imageDTO
+                };
+            }
+            catch (Exception ex)
+            {
+                return new ActionResponse<ImageDTO>
+                {
+                    WasSuccess = false,
+                    Message = ex.Message
+                };
+            }
+        }
+
         public override async Task<ActionResponse<IEnumerable<Product>>> GetAsync(PaginationDTO pagination)
         {
             var queryable = _context.Products
@@ -159,6 +239,18 @@ namespace Orders.Backend.Repositories.Implementations
                 product.Description = productDTO.Description;
                 product.Price = productDTO.Price;
                 product.Stock = productDTO.Stock;
+
+                _context.ProductCategories.RemoveRange(product.ProductCategories!);
+                product.ProductCategories = new List<ProductCategory>();
+
+                foreach (var productCategoryId in productDTO.ProductCategoryIds!)
+                {
+                    var category = await _context.Categories.FindAsync(productCategoryId);
+                    if (category != null)
+                    {
+                        _context.ProductCategories.Add(new ProductCategory { CategoryId = category.Id, ProductId = product.Id });
+                    }
+                }
 
                 //TODO: Pending to solve problem to update categories
                 //product.ProductCategories = productDTO.ProductCategoryIds!.Select(x => new ProductCategory { CategoryId = x }).ToList();
