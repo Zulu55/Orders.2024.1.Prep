@@ -143,7 +143,8 @@ namespace Orders.Backend.Repositories.Implementations
             try
             {
                 var product = await _context.Products
-                    .Include(x => x.ProductCategories)
+                    .Include(x => x.ProductCategories!)
+                    .ThenInclude(x => x.Category)
                     .FirstOrDefaultAsync(x => x.Id == productDTO.Id);
                 if (product == null)
                 {
@@ -158,7 +159,9 @@ namespace Orders.Backend.Repositories.Implementations
                 product.Description = productDTO.Description;
                 product.Price = productDTO.Price;
                 product.Stock = productDTO.Stock;
-                product.ProductCategories = productDTO.ProductCategoryIds!.Select(x => new ProductCategory { CategoryId = x }).ToList();
+
+                //TODO: Pending to solve problem to update categories
+                //product.ProductCategories = productDTO.ProductCategoryIds!.Select(x => new ProductCategory { CategoryId = x }).ToList();
 
                 _context.Update(product);
                 await _context.SaveChangesAsync();

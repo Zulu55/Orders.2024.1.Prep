@@ -26,8 +26,8 @@ namespace Orders.Backend.Data
         public async Task SeedAsync()
         {
             await _context.Database.EnsureCreatedAsync();
-            //await CheckCountriesAsync();
-            await CheckCountriesFullAsync();
+            await CheckCountriesAsync();
+            //await CheckCountriesFullAsync();
             await CheckCategoriesAsync();
             await CheckRolesAsync();
             await CheckProductsAsync();
