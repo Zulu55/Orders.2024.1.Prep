@@ -16,7 +16,7 @@ namespace Orders.Shared.Enums
         [Description("Confirmado")]
         Confirmed,
 
-        [Description("Confirmed")]
+        [Description("Cancelado")]
         Cancelled
     }
 }
