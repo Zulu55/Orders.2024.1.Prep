@@ -67,7 +67,7 @@ namespace Orders.Frontend.Pages
                     Toast = true,
                     Position = SweetAlertPosition.BottomEnd,
                     ShowConfirmButton = false,
-                    Timer = 5000
+                    Timer = 3000
                 });
                 await toast1.FireAsync(icon: SweetAlertIcon.Error, message: "Debes haber iniciado sesión para poder agregar productos al carro de compras.");
                 return;
