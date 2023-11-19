@@ -14,6 +14,14 @@ else
             <button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync"><i class="oi oi-layers" /> Filtrar</button>
             <button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync"><i class="oi oi-ban" /> Limpiar</button>
         </div>
+        <AuthorizeView>
+            <Authorized>
+                @if (counter > 0)
+                {
+                    <a href="/Cart/ShowCart" class="btn btn-primary">Ver Carro de Compras (@counter)</a>
+                }
+            </Authorized>
+        </AuthorizeView>
     </div>
 
     <Pagination CurrentPage="currentPage"

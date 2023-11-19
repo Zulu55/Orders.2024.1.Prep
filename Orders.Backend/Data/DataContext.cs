@@ -17,6 +17,7 @@ namespace Orders.Backend.Data
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<State> States { get; set; }
+        public DbSet<TemporalOrder> TemporalOrders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,26 +28,7 @@ namespace Orders.Backend.Data
             modelBuilder.Entity<Product>().HasIndex(x => x.Name).IsUnique();
             modelBuilder.Entity<City>().HasIndex(c => new { c.StateId, c.Name }).IsUnique();
             DisableCascadingDelete(modelBuilder);
-            //SetupForeingKeys(modelBuilder);
         }
-
-        //private void SetupForeingKeys(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<ProductCategory>()
-        //        .HasKey(pc => new { pc.ProductId, pc.CategoryId });
-
-        //    modelBuilder.Entity<ProductCategory>()
-        //        .HasOne(pc => pc.Product)
-        //        .WithMany(p => p.ProductCategories)
-        //        .HasForeignKey(pc => pc.ProductId)
-        //        .IsRequired();
-
-        //    modelBuilder.Entity<ProductCategory>()
-        //        .HasOne(pc => pc.Category)
-        //        .WithMany(c => c.ProductCategories)
-        //        .HasForeignKey(pc => pc.CategoryId)
-        //        .IsRequired();
-        //}
 
         private void DisableCascadingDelete(ModelBuilder modelBuilder)
         {

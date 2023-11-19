@@ -20,11 +20,11 @@ namespace Orders.Frontend.Pages.Products
 
         [Parameter]
         [SupplyParameterFromQuery]
-        public string Page { get; set; } = "";
+        public string Page { get; set; } = string.Empty;
 
         [Parameter]
         [SupplyParameterFromQuery]
-        public string Filter { get; set; } = "";
+        public string Filter { get; set; } = string.Empty;
 
         protected override async Task OnInitializedAsync()
         {
