@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Moq;
-using Orders.Backend.Controllers;
-using Orders.Backend.UnitsOfWork.Interfaces;
+﻿using Moq;
+using Orders.Backend.Repositories.Interfaces;
+using Orders.Backend.UnitsOfWork.Implementations;
 using Orders.Shared.DTOs;
 using Orders.Shared.Entities;
 using Orders.Shared.Responses;
@@ -9,155 +8,85 @@ using Orders.Shared.Responses;
 namespace Orders.Tests.UnitsOfWork
 {
     [TestClass]
-    public class CountriesControllerTests
+    public class CountriesUnitOfWorkTests
     {
-        private Mock<IGenericUnitOfWork<Country>> _mockGenericUnitOfWork = null!;
-        private Mock<ICountriesUnitOfWork> _mockCountriesUnitOfWork = null!;
-        private CountriesController _controller = null!;
+        private Mock<IGenericRepository<Country>> _mockGenericRepository = null!;
+        private Mock<ICountriesRepository> _mockCountriesRepository = null!;
+        private CountriesUnitOfWork _unitOfWork = null!;
 
         [TestInitialize]
         public void Initialize()
         {
-            _mockGenericUnitOfWork = new Mock<IGenericUnitOfWork<Country>>();
-            _mockCountriesUnitOfWork = new Mock<ICountriesUnitOfWork>();
-            _controller = new CountriesController(_mockGenericUnitOfWork.Object, _mockCountriesUnitOfWork.Object);
+            _mockGenericRepository = new Mock<IGenericRepository<Country>>();
+            _mockCountriesRepository = new Mock<ICountriesRepository>();
+            _unitOfWork = new CountriesUnitOfWork(_mockGenericRepository.Object, _mockCountriesRepository.Object);
         }
 
         [TestMethod]
-        public async Task GetComboAsync_ShouldReturnOk()
-        {
-            // Arrange
-            var response = new List<Country> { new Country { Id = 1, Name = "Country" } };
-            _mockCountriesUnitOfWork.Setup(x => x.GetComboAsync())
-                .ReturnsAsync(response);
-
-            // Act
-            var result = await _controller.GetComboAsync();
-
-            // Assert
-            Assert.IsInstanceOfType(result, typeof(OkObjectResult));
-            var okResult = result as OkObjectResult;
-            Assert.AreEqual(response, okResult?.Value);
-            _mockCountriesUnitOfWork.Verify(x => x.GetComboAsync(), Times.Once());
-        }
-
-        [TestMethod]
-        public async Task GetAsync_Pagination_ShouldReturnOk()
+        public async Task GetAsync_WithPagination_ShouldReturnData()
         {
             // Arrange
             var pagination = new PaginationDTO();
-            var countries = new List<Country>
-            {
-                new Country { Id = 1, Name = "Country1" },
-                new Country { Id = 2, Name = "Country2" }
-            };
-            var response = new ActionResponse<IEnumerable<Country>> { WasSuccess = true, Result = countries };
-            _mockCountriesUnitOfWork.Setup(x => x.GetAsync(pagination))
-                .ReturnsAsync(response);
+            var expectedResponse = new ActionResponse<IEnumerable<Country>> { WasSuccess = true };
+            _mockCountriesRepository.Setup(x => x.GetAsync(pagination))
+                .ReturnsAsync(expectedResponse);
 
             // Act
-            var result = await _controller.GetAsync(pagination);
+            var result = await _unitOfWork.GetAsync(pagination);
 
             // Assert
-            Assert.IsInstanceOfType(result, typeof(OkObjectResult));
-            var okResult = result as OkObjectResult;
-            Assert.AreEqual(countries, okResult?.Value);
-            _mockCountriesUnitOfWork.Verify(x => x.GetAsync(pagination), Times.Once());
+            Assert.AreEqual(expectedResponse, result);
+            _mockCountriesRepository.Verify(x => x.GetAsync(pagination), Times.Once);
         }
 
         [TestMethod]
-        public async Task GetAsync_Pagination_ShouldReturnBadRequest()
+        public async Task GetTotalPagesAsync_ShouldReturnTotalPages()
         {
             // Arrange
             var pagination = new PaginationDTO();
-            var countries = new List<Country>
-            {
-                new Country { Id = 1, Name = "Country1" },
-                new Country { Id = 2, Name = "Country2" }
-            };
-            var response = new ActionResponse<IEnumerable<Country>> { WasSuccess = false, Result = countries };
-            _mockCountriesUnitOfWork.Setup(x => x.GetAsync(pagination))
-                .ReturnsAsync(response);
+            var expectedResponse = new ActionResponse<int> { WasSuccess = true };
+            _mockCountriesRepository.Setup(x => x.GetTotalPagesAsync(pagination))
+                .ReturnsAsync(expectedResponse);
 
             // Act
-            var result = await _controller.GetAsync(pagination);
+            var result = await _unitOfWork.GetTotalPagesAsync(pagination);
 
             // Assert
-            Assert.IsInstanceOfType(result, typeof(BadRequestResult));
-            _mockCountriesUnitOfWork.Verify(x => x.GetAsync(pagination), Times.Once());
+            Assert.AreEqual(expectedResponse, result);
+            _mockCountriesRepository.Verify(x => x.GetTotalPagesAsync(pagination), Times.Once);
         }
 
         [TestMethod]
-        public async Task GetPagesAsync_ShouldReturnOk()
+        public async Task GetAsync_WithId_ShouldReturnData()
         {
             // Arrange
-            var pagination = new PaginationDTO();
-            var totalPages = 5;
-            var response = new ActionResponse<int> { WasSuccess = true, Result = totalPages };
-            _mockCountriesUnitOfWork.Setup(x => x.GetTotalPagesAsync(pagination)).ReturnsAsync(response);
+            int id = 1;
+            var expectedResponse = new ActionResponse<Country> { WasSuccess = true };
+            _mockCountriesRepository.Setup(x => x.GetAsync(id))
+                .ReturnsAsync(expectedResponse);
 
             // Act
-            var result = await _controller.GetPagesAsync(pagination);
+            var result = await _unitOfWork.GetAsync(id);
 
             // Assert
-            Assert.IsInstanceOfType(result, typeof(OkObjectResult));
-            var okResult = result as OkObjectResult;
-            Assert.AreEqual(totalPages, okResult?.Value);
-            _mockCountriesUnitOfWork.Verify(x => x.GetTotalPagesAsync(pagination), Times.Once());
+            Assert.AreEqual(expectedResponse, result);
+            _mockCountriesRepository.Verify(x => x.GetAsync(id), Times.Once);
         }
 
         [TestMethod]
-        public async Task GetPagesAsync_ShouldReturnBadRequest()
+        public async Task GetComboAsync_ShouldReturnData()
         {
             // Arrange
-            var pagination = new PaginationDTO();
-            var totalPages = 5;
-            var response = new ActionResponse<int> { WasSuccess = false };
-            _mockCountriesUnitOfWork.Setup(x => x.GetTotalPagesAsync(pagination)).ReturnsAsync(response);
+            var expectedCountries = new List<Country> { new Country { Id = 1, Name = "Country1" } };
+            _mockCountriesRepository.Setup(x => x.GetComboAsync())
+                .ReturnsAsync(expectedCountries);
 
             // Act
-            var result = await _controller.GetPagesAsync(pagination);
+            var result = await _unitOfWork.GetComboAsync();
 
             // Assert
-            Assert.IsInstanceOfType(result, typeof(BadRequestResult));
-            _mockCountriesUnitOfWork.Verify(x => x.GetTotalPagesAsync(pagination), Times.Once());
-        }
-
-        [TestMethod]
-        public async Task GetAsync_ById_ShouldReturnOk()
-        {
-            // Arrange
-            var countryId = 1;
-            var country = new Country { Id = countryId, Name = "Country1" };
-            var response = new ActionResponse<Country> { WasSuccess = true, Result = country };
-            _mockCountriesUnitOfWork.Setup(x => x.GetAsync(countryId)).ReturnsAsync(response);
-
-            // Act
-            var result = await _controller.GetAsync(countryId);
-
-            // Assert
-            Assert.IsInstanceOfType(result, typeof(OkObjectResult));
-            var okResult = result as OkObjectResult;
-            Assert.AreEqual(country, okResult?.Value);
-            _mockCountriesUnitOfWork.Verify(x => x.GetAsync(countryId), Times.Once());
-        }
-
-        [TestMethod]
-        public async Task GetAsync_ById_ShouldReturnNotFound()
-        {
-            // Arrange
-            var countryId = 1;
-            var response = new ActionResponse<Country> { WasSuccess = false, Message = "Not Found" };
-            _mockCountriesUnitOfWork.Setup(x => x.GetAsync(countryId)).ReturnsAsync(response);
-
-            // Act
-            var result = await _controller.GetAsync(countryId);
-
-            // Assert
-            Assert.IsInstanceOfType(result, typeof(NotFoundObjectResult));
-            var notFoundResult = result as NotFoundObjectResult;
-            Assert.AreEqual("Not Found", notFoundResult?.Value);
-            _mockCountriesUnitOfWork.Verify(x => x.GetAsync(countryId), Times.Once());
+            CollectionAssert.AreEqual(expectedCountries, new List<Country>(result));
+            _mockCountriesRepository.Verify(x => x.GetComboAsync(), Times.Once);
         }
     }
 }
