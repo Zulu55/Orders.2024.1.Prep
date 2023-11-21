@@ -39,12 +39,11 @@ namespace Orders.Backend.Repositories.Implementations
                 await _fileStorage.RemoveFileAsync(productImage.Image, "products");
             }
 
-            _context.ProductCategories.RemoveRange(product.ProductCategories!);
-            _context.ProductImages.RemoveRange(product.ProductImages!);
-            _context.Products.Remove(product);
-
             try
             {
+                _context.ProductCategories.RemoveRange(product.ProductCategories!);
+                _context.ProductImages.RemoveRange(product.ProductImages!);
+                _context.Products.Remove(product);
                 await _context.SaveChangesAsync();
                 return new ActionResponse<Product>
                 {
@@ -121,24 +120,13 @@ namespace Orders.Backend.Repositories.Implementations
             await _fileStorage.RemoveFileAsync(lastImage!.Image, "products");
             _context.ProductImages.Remove(lastImage);
 
-            try
+            await _context.SaveChangesAsync();
+            imageDTO.Images = product.ProductImages.Select(x => x.Image).ToList();
+            return new ActionResponse<ImageDTO>
             {
-                await _context.SaveChangesAsync();
-                imageDTO.Images = product.ProductImages.Select(x => x.Image).ToList();
-                return new ActionResponse<ImageDTO>
-                {
-                    WasSuccess = true,
-                    Result = imageDTO
-                };
-            }
-            catch (Exception ex)
-            {
-                return new ActionResponse<ImageDTO>
-                {
-                    WasSuccess = false,
-                    Message = ex.Message
-                };
-            }
+                WasSuccess = true,
+                Result = imageDTO
+            };
         }
 
         public override async Task<ActionResponse<IEnumerable<Product>>> GetAsync(PaginationDTO pagination)
