@@ -58,7 +58,7 @@ namespace Orders.Backend.Controllers
         }
 
         [HttpPost("RecoverPassword")]
-        public async Task<IActionResult> RecoverPassword([FromBody] EmailDTO model)
+        public async Task<IActionResult> RecoverPasswordAsync([FromBody] EmailDTO model)
         {
             var user = await _usersUnitOfWork.GetUserAsync(model.Email);
             if (user == null)
@@ -88,7 +88,7 @@ namespace Orders.Backend.Controllers
         }
 
         [HttpPost("ResetPassword")]
-        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDTO model)
+        public async Task<IActionResult> ResetPasswordAsync([FromBody] ResetPasswordDTO model)
         {
             var user = await _usersUnitOfWork.GetUserAsync(model.Email);
             if (user == null)
@@ -106,7 +106,7 @@ namespace Orders.Backend.Controllers
         }
 
         [HttpPost("ResedToken")]
-        public async Task<IActionResult> ResedToken([FromBody] EmailDTO model)
+        public async Task<IActionResult> ResedTokenAsync([FromBody] EmailDTO model)
         {
             var user = await _usersUnitOfWork.GetUserAsync(model.Email);
             if (user == null)
@@ -168,7 +168,7 @@ namespace Orders.Backend.Controllers
 
         [HttpPut]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<IActionResult> Put(User user)
+        public async Task<IActionResult> PutAsync(User user)
         {
             try
             {
@@ -208,7 +208,7 @@ namespace Orders.Backend.Controllers
 
         [HttpGet]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetAsync()
         {
             return Ok(await _usersUnitOfWork.GetUserAsync(User.Identity!.Name!));
         }

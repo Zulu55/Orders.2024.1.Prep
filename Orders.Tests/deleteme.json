@@ -1,0 +1,434 @@
+[
+  {
+    "Custom": false,
+    "Description": "Australia enacted a charter in response to a UN Resolution following the 11 Sep 2001 terrorist attacks on the United States. Australia's charter includes entities listed in the UN Consolidated list, plus unique entities designated by Australia's Minister for Foreign Affairs. The Consolidated List of entities is maintained by Australia's Department of Foreign Affairs and Trade (DFAT), which is active in Asia-Pacific and other world-wide efforts to counter terrorism. Australia passed legislation that makes it a criminal offense to deal with entities on this list.",
+    "FileDate": "2023-11-28T16:45:43Z",
+    "HasWeakAKAs": false,
+    "ID": "d3d7d162-4ccb-4a3c-8e31-62a4ec84c677",
+    "Name": "AUSTRALIA DEPT OF FOREIGN AFFAIRS AND TRADE.BDF",
+    "PublishedDate": "2023-11-28T15:48:52Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The HM Treasury (formerly known as Bank of England) is the central bank of the United Kingdom. The Bank works to ensure that the UK financial system provides effective support to the rest of the UK economy. In doing so, the HM Treasury provides a consolidated list of targets that have been listed by the UN, EU and UK under legislation relating to Al-Qaida & Taliban, Burma/Myanmar, Ivory Coast, Democratic Republic of the Congo, Federal Republic of Yugoslavia & Serbia, Iraq, Terrorism and Zimbabwe. The list also includes the Financial Sanctions, Ukraine (Sovereignty and Territorial Integrity), which identifies restrictive measures (not subject to asset freeze) in view of Russia's actions destabilizing the situation in Ukraine.",
+    "FileDate": "2023-11-30T16:57:14Z",
+    "HasWeakAKAs": false,
+    "ID": "5d3711c2-cdea-4484-a663-721e1cb67a23",
+    "Name": "BANK OF ENGLAND CONSOLIDATED LIST.BDF",
+    "PublishedDate": "2023-11-30T16:16:13Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Bureau of Industry and Security (BIS) administers export controls on dual-use items. BIS also coordinates Commerce Department homeland security activities, leads the federal government's outreach to the private sector regarding critical infrastructure protection and cyber security, and assists U.S. industry in complying with the Chemical Weapons Convention and other international arms agreements. BIS publishes and maintains watchlists of businesses to use in verifying that transactions are not being conducted with, or on-behalf of denied or suspect parties, including the Denied Persons list, the Entity list, the Unverified List, and the Military End User list.",
+    "FileDate": "2023-11-29T16:57:27Z",
+    "HasWeakAKAs": false,
+    "ID": "debc63f5-5caf-40ff-ab84-cb98fd28b4df",
+    "Name": "BUREAU OF INDUSTRY AND SECURITY.BDF",
+    "PublishedDate": "2023-11-28T15:58:13Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Chiefs of State and Foreign Cabinet Members list comes from the similarly-titled CIA publication, Chiefs of State and Cabinet Members of Foreign Governments. The list includes current and some past political figures. However, family members and close associates are not included, since they are not part of the CIA document. The government does not publish a consolidated list of PEPs or of senior foreign political figures (SFPFs) as defined in Section 312 of the USA PATRIOT Act.",
+    "FileDate": "2023-09-27T18:38:33Z",
+    "HasWeakAKAs": false,
+    "ID": "099a5216-c559-4742-bb40-df33f9e731c9",
+    "Name": "CHIEFS OF STATE AND FOREIGN CABINET MEMBERS.BDF",
+    "PublishedDate": "2020-10-27T22:25:45Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The CFTC regulates commodity futures and option markets in the United States. LexisNexis' CFTC list contains the disciplinary records for entities that have violated CTFC rules or broken laws. The disciplinary history available includes Reparations Sanctions in Effect (from 1984) and Administrative Sanctions in Effect.",
+    "FileDate": "2023-11-21T16:34:12Z",
+    "HasWeakAKAs": false,
+    "ID": "5647e38a-eb42-450a-91fd-ddae0fc36d16",
+    "Name": "COMMODITY FUTURES TRADING COMMISSION SANCTIONS.BDF",
+    "PublishedDate": "2023-11-20T21:11:39Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "Control of arms sales to foreign parties is an integral part of the U.S. ability to safeguard national security and further foreign policy objectives. The Defense Trade Controls (DTC) office controls the export and temporary import of defense articles and defense services covered by the United States Munitions List. The DTC handles matters relating to defense trade compliance and enforcement, including applications for licenses to export defense articles and services.  The DTC publishes a list of entities barred from trade transactions because they are believed to have been acting in a way detrimental to United States global security interests.",
+    "FileDate": "2023-09-27T18:39:08Z",
+    "HasWeakAKAs": false,
+    "ID": "4072cd6c-0a30-481b-a083-88908cc67e28",
+    "Name": "DTC DEBARRED PARTIES.BDF",
+    "PublishedDate": "2023-06-15T15:01:56Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The EPLS is a list that identifies those parties excluded from receiving federal contracts, certain subcontracts, and certain types of federal financial and non-financial assistance and benefits.",
+    "FileDate": "2023-11-27T16:28:12Z",
+    "HasWeakAKAs": false,
+    "ID": "be3bdfe4-01d6-43fc-9fa5-a462e8a76f14",
+    "Name": "EPLS.BDF",
+    "PublishedDate": "2023-11-27T12:33:02Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "A consolidated list of entities subject to European Union (EU) financial sanctions was developed and is maintained for the European Commission by the European Banking Federation, the European Savings Banks Groups, the European Association of Co-operative Banks, and the European Association of Public Banks. All persons and entities doing business in the EU, including non-EU citizens and businesses established in the EU but doing business outside the EU, are required to freeze all funds and economic resources of entities on the list, and are prohibited from making funds or economic resources available.",
+    "FileDate": "2023-11-30T16:53:31Z",
+    "HasWeakAKAs": false,
+    "ID": "5bc3da15-3680-4d17-8924-bca63bee746a",
+    "Name": "EU CONSOLIDATED LIST.BDF",
+    "PublishedDate": "2023-11-29T21:20:00Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Financial Action Task Force (FATF) identified jurisdictions that have strategic deficiencies in combating money laundering and/or terrorist financing.",
+    "FileDate": "2023-11-21T16:34:53Z",
+    "HasWeakAKAs": false,
+    "ID": "02744985-ba79-4755-b9cc-8e2fe822c3bc",
+    "Name": "FATF Financial Action Task Force.CDF",
+    "PublishedDate": "2023-10-27T21:19:15Z",
+    "Type": "CDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Federal Bureau of Investigations releases watchlists for public use: Most Wanted, Top Ten Most Wanted, Seeking Information, Most Wanted Terrorists, and Hijacking Suspects from September 11, 2001. Companies are advised to contact their district FBI office for compliance requirements and follow-up.",
+    "FileDate": "2023-09-27T18:32:14Z",
+    "HasWeakAKAs": false,
+    "ID": "f3c56cc4-d256-41d5-b956-86580146ee58",
+    "Name": "FBI HIJACK SUSPECTS.BDF",
+    "PublishedDate": "2001-09-27T17:09:42Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Federal Bureau of Investigations releases watchlists for public use: Most Wanted, Top Ten Most Wanted, Seeking Information, Most Wanted Terrorists, and Hijacking Suspects from September 11, 2001. Companies are advised to contact their district FBI office for compliance requirements and follow-up.",
+    "FileDate": "2023-09-27T18:32:43Z",
+    "HasWeakAKAs": false,
+    "ID": "5b9e980e-3253-425c-9842-1bc0fb7ba68b",
+    "Name": "FBI MOST WANTED TERRORISTS.BDF",
+    "PublishedDate": "2023-06-14T15:11:54Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Federal Bureau of Investigations releases watchlists for public use: Most Wanted, Top Ten Most Wanted, Seeking Information, Most Wanted Terrorists, and Hijacking Suspects from September 11, 2001. Companies are advised to contact their district FBI office for compliance requirements and follow-up.",
+    "FileDate": "2023-11-21T16:34:12Z",
+    "HasWeakAKAs": false,
+    "ID": "9d525ad5-aa83-4969-8fd1-d769a6966cea",
+    "Name": "FBI MOST WANTED.BDF",
+    "PublishedDate": "2023-11-18T21:16:54Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Federal Bureau of Investigations releases watchlists for public use: Most Wanted, Top Ten Most Wanted, Seeking Information, Most Wanted Terrorists, and Hijacking Suspects from September 11, 2001. Companies are advised to contact their district FBI office for compliance requirements and follow-up.",
+    "FileDate": "2023-09-27T18:07:19Z",
+    "HasWeakAKAs": false,
+    "ID": "1abfd267-e593-4b12-8c30-06846b991146",
+    "Name": "FBI SEEKING INFORMATION.BDF",
+    "PublishedDate": "2023-09-25T20:40:47Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Federal Bureau of Investigations releases watchlists for public use: Most Wanted, Top Ten Most Wanted, Seeking Information, Most Wanted Terrorists, and Hijacking Suspects from September 11, 2001. Companies are advised to contact their district FBI office for compliance requirements and follow-up.",
+    "FileDate": "2023-11-21T16:36:36Z",
+    "HasWeakAKAs": false,
+    "ID": "dbcbce26-bec9-4b8e-987e-28731fdb0ad0",
+    "Name": "FBI TOP TEN MOST WANTED.BDF",
+    "PublishedDate": "2023-11-15T21:19:36Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Foreign Agents Registration Act (FARA) requires entities to register with the Department of Justice when they act on behalf of foreign governments to influence United States' policy and laws. LexisNexis' Foreign Agents Registrations list contains currently registered Active Registrants and Foreign Principals.",
+    "FileDate": "2023-11-21T16:35:17Z",
+    "HasWeakAKAs": false,
+    "ID": "5fd42f5b-cda6-4dc5-bf23-9080fadbfbba",
+    "Name": "FOREIGN AGENTS REGISTRATIONS.BDF",
+    "PublishedDate": "2023-11-20T21:13:32Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Bank of England is the central bank of the United Kingdom. The Bank works to ensure that the UK financial system provides effective support to the rest of the UK economy. In doing so, the Bank of England provides a consolidated list of targets that have been listed by the UN, EU and UK under legislation relating to Al-Qaida & Taliban, Burma/Myanmar, Cote d'Ivoire, Democratic Republic of the Congo, Federal Republic of Yugoslavia & Serbia, Iraq, Terrorism and Zimbabwe. The source has officially lifted the restrictive measures against the entities on the list as of May, 2013. There are no longer any prohibitions on dealing with the funds or economic resources of those persons listed previously in the Investment Ban List. Therefore the Investment Ban List has been removed from the HM Treasury's website. For further information go to http://webarchive.nationalarchives.gov.uk/20130129110402/http:/www.hm-treasury.gov.uk/fin_sanctions_index.htm",
+    "FileDate": "2014-10-28T18:56:38Z",
+    "HasWeakAKAs": false,
+    "ID": "15531ccc-fa6c-4b78-8b9b-ae0dafbd0f45",
+    "Name": "HM TREASURY INVESTMENT BAN LIST.BDF",
+    "PublishedDate": "2011-12-21T14:15:16Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "HM Treasury Sanctions watchlist contains jurisdictions subject to financial sanctions or economic measures administered by Her Majesty's Treasury in the United Kingdom. In addition to restrictions targeting specific individuals and entities in Iran, the UK enacted sanctions programs to control or restrict certain activities to and from other Iranian persons, entities or bodies.",
+    "FileDate": "2023-09-27T18:33:08Z",
+    "HasWeakAKAs": false,
+    "ID": "a6c98695-d413-4b43-8f3a-2b55168324b9",
+    "Name": "HM TREASURY SANCTIONS.CDF",
+    "PublishedDate": "2010-11-15T16:05:41Z",
+    "Type": "CDF"
+  },
+  {
+    "Custom": false,
+    "Description": "Banks subject to the authority of Hong Kong Monetary Authority (HKMA) should check the names on this list against their records and report any transactions or relationships you have or have had with the named individuals or entities to the Hong Kong Joint Financial Intelligence Unit and the HKMA.",
+    "FileDate": "2023-11-30T16:53:14Z",
+    "HasWeakAKAs": false,
+    "ID": "b077b613-ce86-4a73-b3df-263bf1c3d334",
+    "Name": "HONG KONG MONETARY AUTHORITY.BDF",
+    "PublishedDate": "2023-11-30T16:13:43Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "Limited Denial of Participation, HUD Funding Disqualifications",
+    "FileDate": "2023-11-21T16:35:17Z",
+    "HasWeakAKAs": false,
+    "ID": "d95cf847-2042-4799-8787-c8183c85abc9",
+    "Name": "HUD LDP.BDF",
+    "PublishedDate": "2023-11-20T21:17:41Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "Interpol exists to help create a safer world. Their goal is to provide a unique range of essential services for the law enforcement community to optimize the international effort to combat crime. Interpol maintains a small proportion of their 'Most Wanted Fugitives' list for public dissemination. Interpol has removed access to this data by users other than registered law enforcement and other Interpol approved users of the data. As a result, technology vendors do not have access to the complete and current Interpol data at this time. LexisNexis is working to regain access for permissible users that prefer to use the Bridger Insight technology to process searches. The most recent source update is May 21, 2013.",
+    "FileDate": "2014-10-28T18:56:39Z",
+    "HasWeakAKAs": false,
+    "ID": "1fb823a4-626c-4341-847f-cfb02daa5c55",
+    "Name": "INTERPOL MOST WANTED.BDF",
+    "PublishedDate": "2013-05-21T14:33:58Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Financial Regulator in Ireland publishes warning notices for firms that operate as investment firms that have not been properly authorized to operate within Ireland as such a business. These notices are used to make the LexisNexis watchlist.",
+    "FileDate": "2023-11-21T16:35:38Z",
+    "HasWeakAKAs": false,
+    "ID": "0c9a1a39-b6b5-4179-b891-a17b46706d05",
+    "Name": "IRELAND FINANCIAL REGULATOR UNAUTHORIZED FIRMS.BDF",
+    "PublishedDate": "2023-11-10T21:18:23Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "LexisNexis' watchlist contains entities that are neither registered with nor authorized by the FSA as legitimate entities to conduct financial/securities-related business.",
+    "FileDate": "2023-09-27T18:33:31Z",
+    "HasWeakAKAs": false,
+    "ID": "b4feb1b6-a508-4822-ab99-f4f359452b62",
+    "Name": "JAPAN FSA.BDF",
+    "PublishedDate": "2023-07-10T20:03:48Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "METI is comprised of many bureaus and government agencies. The agency responsible for trade controls is Trade and Economic Cooperation Bureau's Trade Control Department and specifically the Security Export Control Policy Division. This division creates the WMD foreign end user list that restricts trade with the listed entities.",
+    "FileDate": "2023-09-27T18:33:53Z",
+    "HasWeakAKAs": false,
+    "ID": "59e9d879-e4be-42e5-9776-7c23a175d2ff",
+    "Name": "JAPAN METI-WMD PROLIFERATORS.BDF",
+    "PublishedDate": "2022-11-04T23:37:42Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "MOF's International Bureau generates the sanction list comprised of UN and Japanese sanctions programs that restrict transactions with entities on the list.",
+    "FileDate": "2023-11-20T16:50:31Z",
+    "HasWeakAKAs": false,
+    "ID": "6e6cdae9-d2b5-4f1a-9f52-cfec31dc5f31",
+    "Name": "JAPAN MOF SANCTIONS.BDF",
+    "PublishedDate": "2023-11-20T16:05:50Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "Financial institutions subject to regulation by the Monetary Authority of Singapore (MAS) should block the assets of individuals and entities on the list; inform the MAS; and provide such further information relating to the funds, financial assets, economic resources, transaction or proposed transaction as MAS may require.",
+    "FileDate": "2023-11-30T16:53:31Z",
+    "HasWeakAKAs": false,
+    "ID": "edf6ffde-1187-4f29-8e79-7e71c77f408d",
+    "Name": "MONETARY AUTHORITY OF SINGAPORE.BDF",
+    "PublishedDate": "2023-11-29T16:01:32Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The United States imposes sanctions under various legal authorities against foreign individuals, private entities, and governments that engage in proliferation activities. The Bureau of International Security and Nonproliferation (ISN), which is within the U.S. Department of State, is responsible for managing a broad range of nonproliferation and arms control functions, including nonproliferation sanctions lists. These lists are compiled into a single Nonproliferation watchlist.",
+    "FileDate": "2023-09-27T18:34:40Z",
+    "HasWeakAKAs": false,
+    "ID": "849de5d9-ea9e-4b49-936a-4672aae4c39a",
+    "Name": "NONPROLIFERATION SANCTIONS.BDF",
+    "PublishedDate": "2023-08-08T15:36:34Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The OFAC NON-SDN ENTITIES list contains OFAC designations that have designations other than SDN or are not solely SDN designations. It currently consists of the Non-SDN Palestinian Legislative Council (NS-PLC) list, the CAPTA List, the Non-SDN Iran Sanctions (NS-ISA) list, the Foreign Sanctions Evaders (FSE) list, the Sectoral Sanctions Identifications (SSI) list, the Non-SDN Menu-Based Sanctions (NS-MBS) list, E.O. 13808 entities of Venezuela, Directive 1 under E.O. 14038 Belarus entities, the Cuba Restricted List, the Cuba Prohibited Accommodations list and the Non-SDN Chinese Military-Industrial Complex Companies List (NS-CMIC).",
+    "FileDate": "2023-11-14T16:42:42Z",
+    "HasWeakAKAs": true,
+    "ID": "3c9d0d76-ebc9-4354-b539-7835b88b8a56",
+    "Name": "OFAC NON-SDN ENTITIES.BDF",
+    "PublishedDate": "2023-11-14T16:06:30Z",
+    "SearchCriteria": "<group id=\"1\" name=\"Source\"><value id=\"1\" name=\"CAPTA List\" /><value id=\"2\" name=\"Cuba Prohibited Accommodations\" /><value id=\"3\" name=\"Cuba Restricted List\" /><value id=\"10\" name=\"Directive 1 under Executive Order 14038\" /><value id=\"4\" name=\"Foreign Sanctions Evaders (FSE) List\" /><value id=\"5\" name=\"Non-SDN Chinese Military-Industrial Complex Companies List (NS-CMIC)\" /><value id=\"6\" name=\"Non-SDN Menu-Based Sanctions List (NS-MBS List)\" /><value id=\"7\" name=\"Palestinian Legislative Council (NS-PLC) List\" /><value id=\"8\" name=\"Sectoral Sanctions Identifications (SSI) List\" /><value id=\"9\" name=\"Venezuela-EO13808\" /></group>",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Office of Foreign Assets Control (OFAC) administers and enforces sanctions programs based on US foreign policy and national security goals. The sanctions programs are targeted against foreign countries, terrorists, international narcotics traffickers, and those engaged in activities related to the proliferation of weapons of mass destruction. OFAC regulations impose controls on financial transactions, including requirements to freeze specific foreign assets under US jurisdiction. The sanctions programs may also control import / export, and travel. Many of the sanctions are based on United Nations mandates and are multilateral in scope. Thus many involve close cooperation with allied governments.",
+    "FileDate": "2023-09-27T18:35:03Z",
+    "HasWeakAKAs": false,
+    "ID": "ee1319b1-b81b-468d-a8b5-c749fc8e8a9b",
+    "Name": "OFAC SANCTIONS.CDF",
+    "PublishedDate": "2017-10-12T17:20:51Z",
+    "Type": "CDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Office of Foreign Assets Control (OFAC) administers a series of laws that impose economic sanctions against hostile targets to further U.S. foreign policy and national security objectives. This listing contains the names and descriptor information on entities identified by the United States to pose a threat to the interests and security of the United States.  This data file also includes narcotics traffickers, terrorists, and business and organizations supporting threatening activities.",
+    "FileDate": "2023-11-30T16:54:23Z",
+    "HasWeakAKAs": false,
+    "ID": "eb56436c-cd56-4845-83c4-3b40d0169dac",
+    "Name": "OFAC SDN.BDF",
+    "PublishedDate": "2023-11-30T15:26:46Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Offshore Financial Centers (OFC) watchlist contains the names of jurisdictions monitored as OFCs by the International Monetary Fund (IMF). Transactions involving OFCs may have the potential for high risk. OFCs sometimes provide low or zero taxation; limited financial regulation; and banking secrecy or anonymity, including the ability to form legal entities where the true beneficial owners remain concealed. OFCs typically have relatively large numbers of financial institutions with little or no physical presence in the OFC and often engage primarily in business with non-residents.",
+    "FileDate": "2023-09-27T18:35:03Z",
+    "HasWeakAKAs": false,
+    "ID": "9ae64629-ab92-4b6f-8994-77d17d9160bd",
+    "Name": "OFFSHORE FINANCIAL CENTERS.CDF",
+    "PublishedDate": "2007-06-10T22:22:02Z",
+    "Type": "CDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The OIG Exclusions watchlist contains the names of individuals and businesses excluded from participating in federally-funded health care programs, including Medicare and Medicaid.",
+    "FileDate": "2023-11-10T17:07:51Z",
+    "HasWeakAKAs": false,
+    "ID": "e2cdd451-9c79-4226-9a4c-c4dfc60efe88",
+    "Name": "OIG EXCLUSIONS.BDF",
+    "PublishedDate": "2023-11-09T00:43:01Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "LexisNexis Risk Solutions' OSFI Consolidated List helps institutions comply with specific requirements set forth by various Canadian government bodies. LNRS aims to capture all Canadian sanctions sources in this watchlist. On or around 31 July 2019, the Office of the Superintendent of Financial Institutions (OSFI) ceased posting its own lists of entities because the lists are available from other public sources. These sources include Global Affairs Canada (GAC), Public Safety Canada, Regulations Implementing the United Nations Resolutions on the Suppression of Terrorism (RIUNRST), and the Regulations Establishing a List of Entities. The designated persons published therein are contained in the OSFI Consolidated List watchlist. GAC also refers to the Consolidated United Nations Security Council Sanctions List (UNCL). You may also wish to include the LNRS UN Consolidated list in order to help meet your financial sanctions compliance program for Canada.",
+    "FileDate": "2023-11-30T16:55:17Z",
+    "HasWeakAKAs": false,
+    "ID": "d3da6aa5-4905-4f5f-98c8-ebfcf60d1fca",
+    "Name": "OSFI CONSOLIDATED LIST.BDF",
+    "PublishedDate": "2023-11-10T15:58:54Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The OSFI Country watchlist contains certain jurisdictions subject to financial sanctions or economic measures administered by the Office of the Superintendent of Financial Institutions (OSFI) in Canada. The information for this watchlist comes directly from OSFI.",
+    "FileDate": "2023-09-27T18:36:02Z",
+    "HasWeakAKAs": false,
+    "ID": "ec29b602-3384-48e1-b32a-4eb9469501eb",
+    "Name": "OSFI COUNTRY.CDF",
+    "PublishedDate": "2017-06-30T16:57:08Z",
+    "Type": "CDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The People's Bank of China (PBC) regulates financial systems and ensures the stability of financial activities. PBC issues financial sanctions in three areas: Terrorism, Non-Proliferation, and Other areas that include UN Security Council Resolutions.",
+    "FileDate": "2023-09-27T18:36:38Z",
+    "HasWeakAKAs": false,
+    "ID": "ed64158c-d484-42c6-85f0-d3de9774d74e",
+    "Name": "PEOPLES BANK OF CHINA (PBC).BDF",
+    "PublishedDate": "2012-04-16T16:31:29Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "Section 311 of the USA PATRIOT Act grants the Secretary of the Treasury the authority to designate certain entities as being of primary money laundering concern (PMLC). Bridger Insight presents PMLC designees in two data files. The first is PMLCJ.cdf which contains the names of designated jurisdictions (countries and territories). The second is PMLC.bdf which contains the names of designated institutions. Once designated, financial institutions subject to the USA PATRIOT Act are required to take any of five special measures, up to and including a restriction against related correspondent accounts or payable-through accounts.",
+    "FileDate": "2023-09-27T18:35:52Z",
+    "HasWeakAKAs": false,
+    "ID": "284ec40f-d88d-41db-99e9-2b43342dfb3e",
+    "Name": "PRIMARY MONEY LAUNDERING CONCERN - JURISDICTIONS.CDF",
+    "PublishedDate": "2019-10-25T17:42:18Z",
+    "Type": "CDF"
+  },
+  {
+    "Custom": false,
+    "Description": "Section 311 of the USA PATRIOT Act grants the Secretary of the Treasury the authority to designate certain entities as being of primary money laundering concern (PMLC). Bridger Insight presents PMLC designees in two data files. The first is PMLCJ.cdf which contains the names of designated jurisdictions (countries and territories). The second is PMLC.bdf which contains the names of designated institutions. Once designated, financial institutions subject to the USA PATRIOT Act are required to take any of five special measures, up to and including a restriction against related correspondent accounts or payable-through accounts.",
+    "FileDate": "2023-09-27T18:36:38Z",
+    "HasWeakAKAs": false,
+    "ID": "98cff092-94b6-4a38-94c4-83cadee82bea",
+    "Name": "PRIMARY MONEY LAUNDERING CONCERN.BDF",
+    "PublishedDate": "2023-01-18T14:22:47Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Reserve Bank of Australia (RBA) watchlist is a consolidated list of individuals and entities subject to bilateral financial sanctions administered by RBA. Information is obtained from RBA, who administers sanctions programs such as those relating to North Korea, Zimbabwe and the former government of Yugoslavia. The source content for this list is now being managed by the Australia Department of Foreign Affairs and Trade (DFAT). All content for this consolidated list has been incorporated into the DFAT list within Bridger Insight.",
+    "FileDate": "2014-10-28T18:56:34Z",
+    "HasWeakAKAs": false,
+    "ID": "8e406576-1435-459e-9c9c-1550463e5365",
+    "Name": "RESERVE BANK OF AUSTRALIA.BDF",
+    "PublishedDate": "2011-10-19T14:15:53Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Terrorist Exclusion List (TEL) was created within section 411 of the USA PATRIOT Act and authorizes the Secretary of State to designate terrorist organizations for immigration purposes. Foreign persons who provide support or are otherwise associated with a TEL organization may be refused entry into the US, or if already here, may be deported, thus they are Excluded from U.S. soil. Financial institutions may consider scanning against the TEL because it contains terrorist organizations who may, under the guise of charitable contributions, launder money and obtain donations through US financial institutions.",
+    "FileDate": "2023-09-27T18:36:38Z",
+    "HasWeakAKAs": false,
+    "ID": "4959eae9-76b8-49ce-889a-813894eeda8b",
+    "Name": "TERRORIST EXCLUSION LIST.BDF",
+    "PublishedDate": "2020-11-05T12:21:42Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The Financial Conduct Authority (FCA) is a non-governmental and independent body that regulates the financial services industry in the United Kingdom. The industries regulated include banks and building societies, mortgage and insurance brokers and advisers. FCA publishes lists of unauthorized firms and individuals that are currently targeting UK investors.",
+    "FileDate": "2023-11-30T16:57:14Z",
+    "HasWeakAKAs": false,
+    "ID": "ee9fc97d-8c12-49c3-b1e3-cc2d249936bf",
+    "Name": "UK FSA.BDF",
+    "PublishedDate": "2023-11-30T15:41:07Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "The United Nations (UN) mandates that member countries participate in sanctions programs that are passed to counter very serious and immediate international threats. For example, the UN mandates that all member countries participate in blocking and freezing the assets of named terrorists. Other programs include Central African Republic, Democratic Republic of the Congo, the former regime in Iraq, Democratic People's Republic of Korea, Haiti, Iran, Libya, South Sudan, Sudan, Somalia and Eritrea and Yemen. The sanctions programs are compiled into our UN Consolidated List.",
+    "FileDate": "2023-11-30T16:57:14Z",
+    "HasWeakAKAs": false,
+    "ID": "743c12e2-d6ac-4a77-9ebe-ac32bc8a4338",
+    "Name": "UN CONSOLIDATED LIST.BDF",
+    "PublishedDate": "2023-11-29T16:19:19Z",
+    "SearchCriteria": "<group id=\"1\" name=\"Sanctions\"><value id=\"16\" name=\"1988 Sanctions\" /><value id=\"13\" name=\"Central African Republic\" /><value id=\"2\" name=\"Cote d'Ivoire - Ivory Coast\" /><value id=\"3\" name=\"Democratic Republic of the Congo\" /><value id=\"12\" name=\"Guinea-Bissau Travel Ban\" /><value id=\"23\" name=\"Haiti\" /><value id=\"4\" name=\"Iran\" /><value id=\"5\" name=\"Iraq\" /><value id=\"1\" name=\"ISIL (Da'esh) and Al-Qaida Sanctions\" /><value id=\"7\" name=\"Lebanon\" /><value id=\"6\" name=\"Liberia\" /><value id=\"11\" name=\"Libya\" /><value id=\"8\" name=\"North Korea - Democratic People's Republic of Korea\" /><value id=\"19\" name=\"Resolution 1718 (2006) and Resolution 2270 (2016)\" /><value id=\"17\" name=\"Resolution 2270 (2016)-Annex III\" /><value id=\"20\" name=\"Resolution 2321 (2016) - Paragraph 12(a)\" /><value id=\"21\" name=\"Resolution 2321 (2016) - Paragraph 12(d)\" /><value id=\"18\" name=\"Resolution 2375 (2017)\" /><value id=\"9\" name=\"Somalia and Eritrea\" /><value id=\"15\" name=\"South Sudan\" /><value id=\"10\" name=\"Sudan\" /><value id=\"14\" name=\"Yemen\" /></group>",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "Bank regulating agencies frequently issue an alert pertaining to entities that may be conducting banking operations without authorization. Any proposed transactions involving these entities should be viewed with extreme caution, and the proper authorities must be notified of any attempt to conduct business. This watchlist is recommended for all organizations involved in transactions with financial institutions.",
+    "FileDate": "2023-09-27T18:38:32Z",
+    "HasWeakAKAs": false,
+    "ID": "a1601af5-4a42-4c36-9585-adac5cd57fcb",
+    "Name": "UNAUTHORIZED BANKS.BDF",
+    "PublishedDate": "2023-04-20T15:18:22Z",
+    "Type": "BDF"
+  },
+  {
+    "Custom": false,
+    "Description": "Alternate and Common Words for Names and Addresses",
+    "FileDate": "2023-11-20T23:21:38Z",
+    "HasWeakAKAs": false,
+    "ID": "9b809af5-0e5b-436c-b51e-a52cf5175fc6",
+    "Name": "WordCompare.SDF",
+    "PublishedDate": "2023-11-20T18:55:55Z",
+    "Type": "SDF"
+  },
+  {
+    "Custom": false,
+    "Description": "Firms and individuals listed are ineligible to be awarded a World Bank-financed contract because they were found to have violated the fraud and corruption provisions of the Procurement Guidelines or the Consultants Guidelines. The designation lasts a specific period of time as determined by World Bank following an investigation and administrative process. In the case of a debarred firm, ineligibility extends to any firm or individual which controls the debarred firm, or any firm which the debarred firm controls. In the case of a debarred individual, ineligibility extends to any firm which the debarred individual controls.",
+    "FileDate": "2023-11-10T17:08:43Z",
+    "HasWeakAKAs": false,
+    "ID": "830201e1-f6fe-488b-8dc0-14c33df9b7f7",
+    "Name": "WORLD BANK INELIGIBLE FIRMS.BDF",
+    "PublishedDate": "2023-11-08T15:34:37Z",
+    "Type": "BDF"
+  }
+]
